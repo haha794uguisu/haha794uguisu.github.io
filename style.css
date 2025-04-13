@@ -1,9 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap');
 
+:root{
+    --header-text-color: #f0efef;
+    --header-color: #363636;
+    --header-hover-color: #454545;
+    --header-ui-color: invert(85%);
+    --base-color: #f0efef;
+    --text-color: #363636;
+    --logo-color: invert(23%);
+    --bg-img: url(https://raw.githubusercontent.com/haha794uguisu/haha794uguisu.github.io/refs/heads/main/img/paper.png);
+}
+.darkmode{
+    --header-text-color: #939393;
+    --header-color: #363636;
+    --header-hover-color: #454545;
+    --header-ui-color: invert(50%);
+    --base-color: #363636;
+    --text-color: #c1c1c1;
+    --logo-color: invert(65%);
+    --bg-img: url(https://raw.githubusercontent.com/haha794uguisu/haha794uguisu.github.io/refs/heads/main/img/paper-dark-mode.png);
+}
+
 body{
     width: 100%;
     margin: 0px auto;
-    background-image: url(https://raw.githubusercontent.com/haha794uguisu/haha794uguisu.github.io/refs/heads/main/img/paper.png);
+    background-image: var(--bg-img);
 }
 
 header{
@@ -14,7 +35,7 @@ header{
 }
 
 .title{
-    color: #f0efef;
+    color: var(--header-text-color);
     line-height: 0px;
     display: flex;
     justify-content: center;
@@ -25,12 +46,12 @@ header{
     font-size: 15px;
     font-weight: auto;
     font-style: normal;
-    background-color: #363636;
+    background-color: var(--header-color);
 }
 
 header a{
     text-decoration: none;
-    color: #f0efef;
+    color: var(--header-text-color);
     line-height: 0px;
     text-align: center;
     width: 10%;
@@ -39,18 +60,19 @@ header a{
     font-size: 13px;
     font-weight: auto;
     font-style: normal;
-    background-color: #363636;
+    background-color: var(--header-color);
     transition: all 0.5s 0s ease;
 }
 header a:hover{
-    background-color: #454545;
+    background-color: var(--header-hover-color);
     line-height: 1.5px;
 }
 header a p{
     margin-top: 18px;
 }
-header a i{
-    margin-top: -21px;
+header a img{
+    margin-top: -10px;
+    filter: var(--header-ui-color)
 }
 
 #bold{
@@ -60,27 +82,49 @@ header a i{
 
 .space{
     width: 40%;
-    background-color: #363636;
+    background-color: var(--header-color);
 }
 
-#night{
+.night-light{
+    height: 50px;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-color);
+}
+
+.night-light button{
+    height: 100%;
+    border-radius: 0;
+    cursor: pointer;
+    border: none;
     line-height: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #f0efef;
-    width: 2%;
-    background-color: #363636;
-    font-size: 22px;
+    color: var(--header-text-color);
+    background-color:var(--header-color);
     transition: all 0.2s 0s ease;
 }
-#night:hover{
-    font-size: 25px;
+
+.night-light button img{
+    filter: var(--header-ui-color);
+}
+
+#theme-switch img:last-child{
+    display: none;
+}
+.darkmode #theme-switch img:first-child{
+    display: none;
+}
+.darkmode #theme-switch img:last-child{
+    display: block;
 }
 
 .space-two{
     width: 8%;
-    background-color: #363636;
+    background-color: var(--header-color);
 }
 
 .content{
@@ -95,12 +139,12 @@ header a i{
 }
 
 #logo{
-    filter: invert(23%);
+    filter: var(--logo-color);
     width: 35%;
     padding-bottom: 10px;
 }
 
-button{
+.logo-and-link button{
     cursor: pointer;
     line-height: 0;
     margin: 0;
@@ -112,32 +156,32 @@ button{
     margin: 0% 0.75%;
     padding: 3px 0px;
     border-radius: 100px;
-    border: 2px solid #363636;
+    border: 2px solid var(--text-color);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bolder;
     font-style: normal;
-    background-color: #36363600;
-    color: #363636;
+    background-color: var(--text-color)00;
+    color: var(--text-color);
     transition: all 0.5s 0s ease;
 }
-button:hover{
-    background-color: #363636;
-    color: #f0efef;
+.logo-and-link button:hover{
+    background-color: var(--text-color);
+    color: var(--base-color);
 }
-button i{
+.logo-and-link button i{
     padding: 0px 2px;
 }
-button p{
+.logo-and-link button p{
     padding: 0px 2px;
 }
 
 #bird img{
     border-radius: 4px;
-    margin-top: -3000px;
-    margin-left: 10%;
-    width: 45%;
+    margin-top: -285px;
+    margin-left: 15%;
+    width: 50%;
 }
 
 @media screen and (max-width: 800px) {
