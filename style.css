@@ -8,6 +8,7 @@
     --base-color: #f0efef;
     --text-color: #363636;
     --logo-color: invert(23%);
+    --bird-brightness: brightness(100%);
     --bg-img: url(https://raw.githubusercontent.com/haha794uguisu/haha794uguisu.github.io/refs/heads/main/img/paper.png);
 }
 .darkmode{
@@ -18,6 +19,7 @@
     --base-color: #363636;
     --text-color: #c1c1c1;
     --logo-color: invert(65%);
+    --bird-brightness: brightness(80%);
     --bg-img: url(https://raw.githubusercontent.com/haha794uguisu/haha794uguisu.github.io/refs/heads/main/img/paper-dark-mode.png);
 }
 
@@ -196,6 +198,7 @@ header a img{
 
 #bird img{
     width: 53%;
+    filter: var(--bird-brightness);
 }
 
 @media screen and (max-width: 800px) {
