@@ -54,7 +54,7 @@ header a{
     color: var(--header-text-color);
     line-height: 0px;
     text-align: center;
-    width: 10%;
+    width: 15%;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-size: 13px;
@@ -81,7 +81,7 @@ header a img{
 }
 
 .space{
-    width: 40%;
+    width: 25%;
     background-color: var(--header-color);
 }
 
@@ -133,18 +133,29 @@ header a img{
     width: 800px;
 }
 
-.paragraph{
-    line-height: 0;
-    float: left;
+.one{
+    display: flex;
+}
+
+.two{
+    height: fit-content;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.three{
+    margin-left: 10%;
 }
 
 #logo{
     filter: var(--logo-color);
-    width: 35%;
+    width: 80%;
     padding-bottom: 10px;
 }
 
-.logo-and-link button{
+.three button{
     cursor: pointer;
     line-height: 0;
     margin: 0;
@@ -152,10 +163,9 @@ header a img{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16%;
+    width: 38.5%;
     margin: 0% 0.75%;
     padding: 3px 0px;
-    border-radius: 100px;
     border: 2px solid var(--text-color);
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
@@ -166,22 +176,26 @@ header a img{
     color: var(--text-color);
     transition: all 0.5s 0s ease;
 }
-.logo-and-link button:hover{
+.three button:hover{
     background-color: var(--text-color);
     color: var(--base-color);
 }
-.logo-and-link button i{
+.three button i{
     padding: 0px 2px;
 }
-.logo-and-link button p{
+.three button p{
     padding: 0px 2px;
 }
 
-#bird img{
-    border-radius: 4px;
-    margin-top: -285px;
-    margin-left: 15%;
+.four{
     width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bird img{
+    width: 53%;
 }
 
 @media screen and (max-width: 800px) {
